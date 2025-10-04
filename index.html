@@ -97,15 +97,15 @@
     </script>
     <script>
       const sgButton = document.getElementById('sgButton');
-      const originalText = sgButton.textContent;
-      const hoverText = 'click here to discover more of SG';
+      const sgoriginalText = sgButton.textContent;
+      const sghoverText = 'click here to discover more of SG';
       const sgURL = 'https://www.visitsingapore.com/travel-tips/travelling-to-singapore/itineraries/'
       sgButton.addEventListener('mouseenter', function() {
-        sgButton.textContent = hoverText;
+        sgButton.textContent = sghoverText;
       });
 
       sgButton.addEventListener('mouseleave', function() {
-        sgButton.textContent = originalText;
+        sgButton.textContent = sgoriginalText;
       });
 
       sgButton.addEventListener('click', function() {
