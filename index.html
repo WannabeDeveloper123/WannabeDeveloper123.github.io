@@ -70,7 +70,8 @@
             about some places in Singapore left out by tour guides.
           </p>
           <div class="button-container">
-            <button class="cta-button">link to marina barrage</button>
+            <button class="cta-button" id="sgButton">click here to discover more of SG</button>
+            <span id="sgID" style="display:block; margin-top: 10px; color: #007bff;"></span>
           </div>
         </div>
       </div>
@@ -95,6 +96,22 @@
         window.open(igURL);
       });
     </script>
+    <script>
+      const sgButton = document.getElementById('sgButton');
+      const originalText = sgButton.textContent;
+      const hoverText = 'click here to discover more of SG';
+      const sgURL = 'https://www.visitsingapore.com/travel-tips/travelling-to-singapore/itineraries/'
+      sgButton.addEventListener('mouseenter', function() {
+        sgButton.textContent = hoverText;
+      });
 
+      sgButton.addEventListener('mouseleave', function() {
+        sgButton.textContent = originalText;
+      });
+
+      sgButton.addEventListener('click', function() {
+        window.open(sgURL);
+      });
+    </script>
   </body>
 </html>
